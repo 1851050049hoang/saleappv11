@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quan ly san pham</title>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <th></th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            {% for p in products %}
+            <tr>
+
+                    <td><img src="{{url_for('static', filename=p.image)}}" alt="{{p.name}}" width="120"/></td>
+                    <td>{{ p.id }}</td>
+                    <td>{{ p.name }}</td>
+                    <td>{{ p.description }}</td>
+                    <td>{{ p.price }}</td>
+
+            </tr>
+            {% endfor%}
+        </table>
+    </div>
+</body>
+</html>

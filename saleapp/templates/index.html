@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chu</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="{{urlfor('static', filename='css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <h1 class="text-center">Ban hang truc tuyen</h1>
+    <ul>
+        {% for cat in categories %}
+            <li><a href="#"> {{cat.name}}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
